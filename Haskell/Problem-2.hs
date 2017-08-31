@@ -6,8 +6,8 @@
 
 import Data.List
 
-sum_even_fibs :: Int -> Int
-sum_even_fibs lim = sum $ gen_even_fibs lim (2:1:[])
+answer :: Int -> Int
+answer lim = sum $ gen_even_fibs lim (2:1:[])
 
 gen_even_fibs :: Int -> [Int] -> [Int]
 gen_even_fibs lim (t2:t1:ts)

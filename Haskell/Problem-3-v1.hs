@@ -1,5 +1,5 @@
 -- Dong, Larry
--- Last edited: Tuesday, August 29, 2017.
+-- Last edited: Wednesday, August 30, 2017.
 -- Project Euler Problem 3
 
 -- Finished
@@ -7,8 +7,10 @@
 import Data.List
 import Prelude
 
-largest_prime_factor :: Int -> Int
-largest_prime_factor n = maximum $ candidates ++ (is_any_prime $ gen_cand n candidates)
+-- number to be used on is 600851475143
+
+answer :: Int -> Int
+answer n = maximum $ candidates ++ (is_any_prime $ gen_cand n candidates)
     where
         candidates = find_prime_factors n [2..sqrt_n] []
         sqrt_n = ceiling $ sqrt $ fromIntegral n
